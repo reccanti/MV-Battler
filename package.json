@@ -1,0 +1,15 @@
+{
+  "name": "rpgmakermv-battler",
+  "version": "0.0.1",
+  "description": "A tool that allows you to quickly and precisely battle rpgmaker characters and enemies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "reccanti <reccanti@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "performance-now": "^0.2.0",
+    "xhr2": "^0.1.3"
+  }
+}
