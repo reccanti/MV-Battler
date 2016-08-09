@@ -1,0 +1,15 @@
+{
+    "data": {
+        "actors": "../../../data/Actors",
+        "armors": "../../../data/Armors",
+        "classes": "../../../data/Classes",
+        "enemies": "../../../data/Enemies",
+        "system": "../../../data/System",
+        "troops": "../../../data/Troops", 
+        "weapons": "../../../data/Weapons"
+    },
+    "engine": {
+        "managers": "../../rpg_managers.js",
+        "objects": "../../rpg_objects.js"
+    }
+}

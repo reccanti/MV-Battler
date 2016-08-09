@@ -12,7 +12,7 @@
  * @param {Number} max The upper boundary
  * @return {Number} A number in the range (min, max)
  */
-Number.prototype.clamp = function(min, max) {
+global.Number.prototype.clamp = function(min, max) {
     return Math.min(Math.max(this, min), max);
 };
 
@@ -23,7 +23,7 @@ Number.prototype.clamp = function(min, max) {
  * @param {Number} n The divisor
  * @return {Number} A modulo value
  */
-Number.prototype.mod = function(n) {
+global.Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
 };
 
@@ -34,7 +34,7 @@ Number.prototype.mod = function(n) {
  * @param {Any} ...args The objects to format
  * @return {String} A formatted string
  */
-String.prototype.format = function() {
+global.String.prototype.format = function() {
     var args = arguments;
     return this.replace(/%([0-9]+)/g, function(s, n) {
         return args[Number(n) - 1];
@@ -48,7 +48,7 @@ String.prototype.format = function() {
  * @param {Number} length The length of the output string
  * @return {String} A string with leading zeros
  */
-String.prototype.padZero = function(length){
+global.String.prototype.padZero = function(length){
     var s = this;
     while (s.length < length) {
         s = '0' + s;
@@ -63,7 +63,7 @@ String.prototype.padZero = function(length){
  * @param {Number} length The length of the output string
  * @return {String} A string with leading zeros
  */
-Number.prototype.padZero = function(length){
+global.Number.prototype.padZero = function(length){
     return String(this).padZero(length);
 };
 
@@ -74,7 +74,7 @@ Number.prototype.padZero = function(length){
  * @param {Array} array The array to compare to
  * @return {Boolean} True if the two arrays are same
  */
-Array.prototype.equals = function(array) {
+global.Array.prototype.equals = function(array) {
     if (!array || this.length !== array.length) {
         return false;
     }
@@ -96,7 +96,7 @@ Array.prototype.equals = function(array) {
  * @method Array.prototype.clone
  * @return {Array} A shallow copy of the array
  */
-Array.prototype.clone = function() {
+global.Array.prototype.clone = function() {
     return this.slice(0);
 };
 
@@ -107,7 +107,7 @@ Array.prototype.clone = function() {
  * @param {Any} element The element to search for
  * @return {Boolean} True if the array contains a given element
  */
-Array.prototype.contains = function(element) {
+global.Array.prototype.contains = function(element) {
     return this.indexOf(element) >= 0;
 };
 
@@ -118,7 +118,7 @@ Array.prototype.contains = function(element) {
  * @param {String} string The string to search for
  * @return {Boolean} True if the string contains a given string
  */
-String.prototype.contains = function(string) {
+global.String.prototype.contains = function(string) {
     return this.indexOf(string) >= 0;
 };
 
@@ -130,6 +130,6 @@ String.prototype.contains = function(string) {
  * @param {Number} max The upper boundary (excluded)
  * @return {Number} A random integer
  */
-Math.randomInt = function(max) {
+global.Math.randomInt = function(max) {
     return Math.floor(max * Math.random());
 };
