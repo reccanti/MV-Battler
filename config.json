@@ -4,6 +4,7 @@
         "armors": "../../../data/Armors",
         "classes": "../../../data/Classes",
         "enemies": "../../../data/Enemies",
+        "skills": "../../../data/Skills", 
         "system": "../../../data/System",
         "troops": "../../../data/Troops", 
         "weapons": "../../../data/Weapons"
